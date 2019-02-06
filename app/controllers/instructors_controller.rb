@@ -4,5 +4,7 @@ class InstructorsController < ApplicationController
     end
 
     def new
-        
+        @instructor = Instructor.new
+    end
+
 end

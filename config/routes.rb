@@ -13,4 +13,5 @@ root to: "students#index"
 
 
   get 'instructors' => "instructors#index", as: 'instructors'
+  get '/instructors/new'=> "instructors#new", as: 'new_instructor'
 end
