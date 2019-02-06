@@ -1,0 +1,21 @@
+<h3> Create a Student </h3>
+
+<%= form_with model: @student, url: students_path, method: :post do |f| %>
+<%= f.label :first_name %>
+<%= f.text_field :first_name %><br> 
+
+<%= f.label :last_name %>
+<%= f.text_field :last_name %><br>
+
+<%= f.label :age %>
+<%= f.text_field :age %><br>
+
+<%= f.label :education %>
+<%= f.text_field :education %><br>
+
+<%= f.label :create_student%>
+<%= f.submit %>
+
+<% end %>
+
+
