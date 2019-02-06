@@ -7,4 +7,14 @@ class InstructorsController < ApplicationController
         @instructor = Instructor.new
     end
 
+    def create
+        @instructor = instructor.new(instructors_params)
+        if @instructor.save
+            redirect_path
+        else
+            redirect_to root_path
+        end
+        
+    end
+    
 end

@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_02_06_204803) do
     t.string "first_name"
     t.string "last_name"
     t.integer "age"
+    t.integer "salary"
     t.string "education"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
