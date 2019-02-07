@@ -20,6 +20,14 @@ class CoursesController < ApplicationController
         @course = Course.find(params[:id])
     end
 
+    def edit
+        @course = Course.new(params[:id])
+    end
+
+    
+
+
+
 
 
 
