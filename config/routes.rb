@@ -29,9 +29,9 @@ root to: "students#index"
   delete '/courses/:id' => 'courses#destroy', as: 'delete_course'
 
   get '/cohorts' => 'cohorts#index', as: 'cohorts'
-  get '/cohorts/new' => 'cohorts#new', as: 'new-cohort'
-  get '/cohort/:id' => 'cohorts#show', as: 'cohort'
-  post '/courses' => 'courses#create'
+  get '/cohorts/new' => 'cohorts#new', as: 'new_cohort'
+  get '/cohorts/:id' => 'cohorts#show', as: 'cohort'
+  post '/cohorts' => 'cohorts#create'
 
 
 end

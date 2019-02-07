@@ -24,7 +24,7 @@ end
 
     private
 def cohorts_params
-    params.require(:cohort).permit(:name, :start_date, :edn_date, :instructor, :students)
+    params.require(:cohort).permit(:name, :start_date, :end_date, :instructor, :students)
   end
 end
 
