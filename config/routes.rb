@@ -27,4 +27,8 @@ root to: "students#index"
   get '/courses/:id/edit' => 'instructors#edit', as: 'edit_course'
   patch '/courses/:id' => 'courses#update'
   delete '/courses/:id' => 'courses#destroy', as: 'delete_course'
+
+  get '/cohorts' => 'cohorts#index', as: 'cohorts'
+  get 'cohorts/new' => 'cohorts#new', as: 'new-cohort'
+
 end

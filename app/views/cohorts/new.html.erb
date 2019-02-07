@@ -1,0 +1,21 @@
+<h1> Create a Cohorts </h1>
+
+<%= form_with model: @scohort, url: cohorts_path, method: :post do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %><br> 
+
+<%= f.label :start_date %>
+<%= f.text_field :start_date %><br>
+
+<%= f.label :end_date %>
+<%= f.text_field :end_date %><br>
+
+<%= f.label :instructor %>
+<%= f.text_field :instructor %><br>
+
+
+<%= f.label :student %>
+<%= f.text_field :student %><br>
+
+<%= f.label :create_student%>
+<%= f.submit %>
