@@ -1,4 +1,4 @@
-<h1> Create Instructos </h1>
+<h1> Create Instructors </h1>
 
 <%= form_with model: @instructor, url: instructors_path, method: :post do |f| %>
 <%= f.label :first_name %>
@@ -9,6 +9,9 @@
 
 <%= f.label :age %>
 <%= f.text_field :age %><br>
+
+<%= f.label :salary %>
+<%= f.text_field :salary %><br>
 
 <%= f.label :education %>
 <%= f.text_field :education %><br>

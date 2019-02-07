@@ -8,13 +8,29 @@ class InstructorsController < ApplicationController
     end
 
     def create
-        @instructor = instructor.new(instructors_params)
+        @instructor = Instructor.new(instructors_params)
         if @instructor.save
-            redirect_path
+            redirect_to instructors_path
         else
             redirect_to root_path
         end
         
     end
-    
+
+    def show
+        @instructor = Instructor.find(params[:id])
+    end
+
+    def edit
+        @instructor = Instructor.find(params[:id])
+    end
+
+
+
+    private
+def instrutors_params
+    params.permit(:first_name, :last_name, :age,:salary, :education)
+  end
+
+
 end

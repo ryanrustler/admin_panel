@@ -14,5 +14,8 @@ root to: "students#index"
 
   get 'instructors' => "instructors#index", as: 'instructors'
   get '/instructors/new'=> "instructors#new", as: 'new_instructor'
+  get '/instructorss/:id' => 'instructors#show', as: 'instructor'
   post '/instructors' => 'instructors#create'
+  get '/instructors/:id/edit' => 'isntructors#edit', as: 'edit_instructor'
+
 end
