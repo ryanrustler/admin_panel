@@ -1,1 +1,7 @@
 <h1> Courses </h1>
+
+<% @courses.each do |course| %>
+<li> <%= course.name %></li>
+<li> <%= course.hours %></li>
+
+<% end %>
