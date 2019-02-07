@@ -1,12 +1,11 @@
 <h1> Instructors </h1>
 
-<% @Instructors.each do |instructor| %>
+<% @instructors.each do |instructor| %>
 
 <li><%= instructor.first_name %> </li>
 <li><%= instructor.last_name %> </li>
 <li><%= instructor.age %> </li>
 <li><%= instructor.salary %></li>
-<li><%= instructor.education %></li>
-
+<li><%= instructor.education %></li><br>
 
 <% end %>

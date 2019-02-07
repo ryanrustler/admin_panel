@@ -6,3 +6,4 @@
 <%= @instructor.salary %>
 <%= @instructor.education %>
 
+<%= link_to 'Remove instructor', delete_instructor_path, method: :delete, data: { confirm: 'Are you sure?' } %>

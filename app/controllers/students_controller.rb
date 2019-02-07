@@ -17,6 +17,7 @@ def create
     end
 
 end
+
 def show
     @student = Student.find(params[:id])
 end

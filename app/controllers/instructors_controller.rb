@@ -36,13 +36,12 @@ class InstructorsController < ApplicationController
         @instructor.destroy
         redirect_to instructors_path
     end
-    
 
 
 
-    private
-def instrutors_params
-    params.permit(:first_name, :last_name, :age,:salary, :education)
+private
+def instructors_params
+    params.require(:instructor).permit(:first_name, :last_name, :age, :salary, :education)
   end
 
 
