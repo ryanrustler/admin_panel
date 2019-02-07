@@ -1,4 +1,6 @@
 <h2> Course </h2>
 
 <%= @course.name %>
-<%= @course.hours %>
+<%= @course.hours %><br>
+
+<%= link_to 'Remove course', delete_course_path, method: :delete, data: { confirm: 'Are you sure?' } %>

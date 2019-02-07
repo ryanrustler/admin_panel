@@ -22,7 +22,9 @@ root to: "students#index"
 
   get '/courses' => 'courses#index', as: 'courses'
   get '/courses/new' => 'courses#new', as: 'new_course'
-  get 'courses/:id' => 'courses#show', as: 'course'
+  get '/courses/:id' => 'courses#show', as: 'course'
   post '/courses' => 'courses#create'
-  get '/courses/:id' => 'instructors#edit', as: 'edit_course'
+  get '/courses/:id/edit' => 'instructors#edit', as: 'edit_course'
+  patch '/courses/:id' => 'courses#update'
+  delete '/courses/:id' => 'courses#destroy', as: 'delete_course'
 end

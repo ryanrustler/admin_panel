@@ -24,33 +24,17 @@ class CoursesController < ApplicationController
         @course = Course.new(params[:id])
     end
 
-    
+    def update
+        @course = Course.find(params[:id])
+        @course.update(courses_params)
+        redirect_to course_path(@course)
+    end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def destroy
+        @course = Course.find(params[:id])
+        @course.destroy
+        redirect_to courses_path
+    end
 
     private
     def courses_params
