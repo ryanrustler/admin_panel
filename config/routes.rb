@@ -17,5 +17,6 @@ root to: "students#index"
   get '/instructorss/:id' => 'instructors#show', as: 'instructor'
   post '/instructors' => 'instructors#create'
   get '/instructors/:id/edit' => 'isntructors#edit', as: 'edit_instructor'
-
+  patch '/instructors/:id' => 'instructors#update'
+  delete '/instructors/:id'=> 'instructors#destroy',as : 'delete_instructor'
 end
