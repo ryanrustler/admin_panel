@@ -20,6 +20,23 @@ def show
     @cohort = Cohort.find(params[:id])
 end
 
+def edit
+    @cohort = Cohort.find(params[:id])
+end
+
+def update
+    @cohort = Cohort.find(params[:id])
+    @cohort.update(cohorts_params)
+    redirect_to cohort_path(@cohort)
+
+end
+
+def destroy
+    @cohort = Cohort.find(params[:id])
+    @cohort.destroy
+    redirect_to cohorts_path
+
+end
 
 
     private

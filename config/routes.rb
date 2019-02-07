@@ -32,6 +32,8 @@ root to: "students#index"
   get '/cohorts/new' => 'cohorts#new', as: 'new_cohort'
   get '/cohorts/:id' => 'cohorts#show', as: 'cohort'
   post '/cohorts' => 'cohorts#create'
-
+  get '/cohorts/:id/edit' => 'cohorts#edit', as: 'edit_cohorts'
+  patch '/cohorts/:id' => 'cohorts#update'
+  delete '/cohorts/:id' => 'cohorts#destroy'
 
 end
