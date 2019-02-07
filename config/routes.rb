@@ -21,4 +21,7 @@ root to: "students#index"
   delete '/instructors/:id' => 'instructors#destroy', as: 'delete_instructor'
 
   get '/courses' => 'courses#index', as: 'courses'
+  get '/courses/new' => 'courses#new', as: 'new_course'
+  get 'courses/:id' => 'courses#show', as: 'course'
+  post '/courses' => 'courses#create'
 end

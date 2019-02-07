@@ -1,0 +1,8 @@
+<h1> Courses </h1>
+
+<%= form_with model: @course, url: courses_path, method: :post do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %><br> 
+
+<%= f.label :hour %>
+<%= f.text_field :hour %><br>
