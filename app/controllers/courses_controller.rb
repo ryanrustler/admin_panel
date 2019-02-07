@@ -20,7 +20,7 @@ class CoursesController < ApplicationController
         @course = Course.find(params[:id])
     end
 
-    
+
 
 
 
@@ -47,4 +47,5 @@ class CoursesController < ApplicationController
     private
     def courses_params
         params.require(:course).permit(:courses, :hours)
+end
 end
