@@ -1,11 +1,11 @@
 <h1> Edit Courses </h1>
 
-<%= form_with model: @course, url: courses_path, method: :post do |f| %>
+<%= form_with model: @course, url: course_path, method: :patch do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %><br> 
 
-<%= f.label :hour %>
-<%= f.text_field :hour %><br>
+<%= f.label :hours %>
+<%= f.text_field :hours %><br>
 
 <%= f.label :create_course%>
 <%= f.submit %>

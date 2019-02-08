@@ -10,7 +10,11 @@ end
 def create
     @cohort = Cohort.new(cohorts_params)
     if @cohort.save
-        redirect_to cohorts_path
+        StudentCohort.create(
+            student_id: params[:cohort][:student_id],
+            cohort_id: @cohort.id
+        )
+        redirect_to @cohort
     else
         redirect_to root_path
     end

@@ -1,7 +1,7 @@
 <h1>Cohort</h1>
 
 <%= @cohort.name %>
-<%= @cohort.star_date %>
+<%= @cohort.start_date %>
 <%= @cohort.end_date %>
 
 <%= link_to 'Remove cohort', delete_cohort_path, method: :delete, data: { confirm: 'Are you sure?' } %>
