@@ -1,6 +1,6 @@
 <h1> Create a Cohorts </h1>
 
-<%= form_with model: @cohort, url: cohorts_path, method: :post do |f| %>
+<%= form_with model: @cohort, url: cohorts_path(@course), method: :post do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %><br> 
 

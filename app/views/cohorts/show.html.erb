@@ -6,7 +6,7 @@
 <%= @cohort.course.name %><br>
 
 <%@students.each do |student|%>
-<%=student.first_name%>
+<%=student.first_name%><br>
 <%end%>
 
 <%= link_to 'Remove cohort', delete_cohort_path, method: :delete, data: { confirm: 'Are you sure?' } %>

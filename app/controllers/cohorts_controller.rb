@@ -28,6 +28,7 @@ end
 def show
     @cohort = Cohort.find(params[:id])
     @students = (@cohort.students.all).uniq
+    
 end
 
 def edit
@@ -51,7 +52,7 @@ end
 
 private
 def cohorts_params
-    params.require(:cohort).permit(:name, :start_date, :end_date)
+    params.require(:cohort).permit(:name, :start_date, :end_date, :course_id)
   end
 end
 
