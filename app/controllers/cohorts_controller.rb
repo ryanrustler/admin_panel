@@ -1,27 +1,33 @@
 class CohortsController < ApplicationController
     def index
         @cohorts = Cohort.all
+        @students = Student.all
+        @courses = Course.all
 end
 
 def new 
     @cohort = Cohort.new
+    @students =Student.all
+    @instructors = Instructor.all
+    @courses = Course.all
 end
 
 def create
     @cohort = Cohort.new(cohorts_params)
     if @cohort.save
-        StudentCohort.create(
+        Studentcohort.create(
             student_id: params[:cohort][:student_id],
             cohort_id: @cohort.id
         )
-        redirect_to @cohort
+               redirect_to @cohort
     else
-        redirect_to root_path
+        render 'new'
     end
 end
 
 def show
     @cohort = Cohort.find(params[:id])
+    @students = (@cohort.students.all).uniq
 end
 
 def edit
@@ -43,9 +49,9 @@ def destroy
 end
 
 
-    private
+private
 def cohorts_params
-    params.require(:cohort).permit(:name, :start_date, :end_date, :instructor, :students)
+    params.require(:cohort).permit(:name, :start_date, :end_date)
   end
 end
 
