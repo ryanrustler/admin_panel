@@ -10,4 +10,6 @@
 <%= f.label :create_cohort%>
 <%= f.submit %>
 
+
+<%= link_to 'Remove course', delete_course_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
