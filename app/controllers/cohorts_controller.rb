@@ -3,6 +3,7 @@ class CohortsController < ApplicationController
         @cohorts = Cohort.all
         @students = Student.all
         @courses = Course.all
+        @instructors = Instructor.all
 end
 
 def new 

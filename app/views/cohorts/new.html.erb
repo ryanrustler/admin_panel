@@ -13,6 +13,9 @@
 <%= f.hidden_field :student_id, value: @student_id%>
 <%=f.select :student_id, @students.map {|student| [student.first_name,student.id]} %>
 
+<%= f.hidden_field :instructor_id, value: @instructor_id%>
+<%=f.select :instructor_id, @instructors.map {|instructor| [instructor.first_name,instructor.id]} %>
+
 <%= f.hidden_field :course_id, value: @course_id%>
 <%=f.select :course_id, @courses.map {|course| [course.name,course.id]} %>
 
