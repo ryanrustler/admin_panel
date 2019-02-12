@@ -16,6 +16,9 @@
 <%= f.label :education %>
 <%= f.select(:education, ["HS", "B.D", "M.D", "Ph.D"]) %><br>
 
+<%= f.label :cohort %><br>
+<%=f.hidden_field :cohort_id, value: @cohort_id%>
+<%= f.select :cohort_id, @cohorts.map {|cohort| [cohort.name,cohort.id]}%>
 
 <%= f.label :create_instructor%>
 <%= f.submit %>
