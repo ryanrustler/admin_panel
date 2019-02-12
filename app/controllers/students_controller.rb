@@ -1,7 +1,8 @@
 class StudentsController < ApplicationController
-    
+
 def index
     @students = Student.all
+    @cohorts = Cohort.all
 end
 
     def new

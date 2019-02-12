@@ -34,6 +34,7 @@ end
 
 def edit
     @cohort = Cohort.find(params[:id])
+    @students = Student.all
 end
 
 def update

@@ -1,10 +1,12 @@
 class InstructorsController < ApplicationController
     def index
         @instructors = Instructor.all
+        @cohorts = Cohort.all
     end
 
     def new
         @instructor = Instructor.new
+        @cohorts = Cohort.all
     end
 
     def create
@@ -12,6 +14,7 @@ class InstructorsController < ApplicationController
         if @instructor.save
             redirect_to instructors_path
         else
+            @cohorts = Cohort.all
             redirect_to root_path
         end
         
