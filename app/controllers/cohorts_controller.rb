@@ -29,12 +29,14 @@ end
 def show
     @cohort = Cohort.find(params[:id])
     @students = (@cohort.students.all).uniq
+    @instructors = Instructor.all
     
 end
 
 def edit
     @cohort = Cohort.find(params[:id])
     @students = Student.all
+    @instructors =Instructor.all
 end
 
 def update

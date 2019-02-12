@@ -1,0 +1,6 @@
+<h1> Students in Cohorts </h1>'
+
+<%@studentcohorts.each do|sc|%>
+<li><%=sc.student.first_name%></li>
+<li><%=sc.cohort.name%></li>
+<%end%>

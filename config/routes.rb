@@ -37,4 +37,6 @@ root to: "students#index"
   patch '/cohorts/:id' => 'cohorts#update'
   delete '/cohorts/:id' => 'cohorts#destroy', as: 'delete_cohort'
 
+  get '/studentcohorts' => 'studentcohorts#index', as: 'studentcohorts'
+
 end

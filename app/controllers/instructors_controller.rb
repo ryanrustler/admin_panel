@@ -7,6 +7,8 @@ class InstructorsController < ApplicationController
     def new
         @instructor = Instructor.new
         @cohorts = Cohort.all
+
+        render :new
     end
 
     def create
@@ -26,12 +28,14 @@ class InstructorsController < ApplicationController
 
     def edit
         @instructor = Instructor.find(params[:id])
+        @cohorts = Cohort.all
     end
 
     def update
         @instructor = Instructor.find(params[:id])
         @instructor.update(instructors_params)
         redirect_to instructor_path(@instructor)
+        @cohorts = Cohort.all
     end
 
     def destroy
@@ -44,7 +48,7 @@ class InstructorsController < ApplicationController
 
 private
 def instructors_params
-    params.require(:instructor).permit(:first_name, :last_name, :age, :salary, :education)
+    params.require(:instructor).permit(:first_name, :last_name, :age, :salary, :education, :cohort_id)
   end
 
 
