@@ -1,11 +1,13 @@
 <h1>Cohort</h1>
 
+<h2><%= @cohort.name %><br></h2>
 <%= @cohort.start_date %><br>
 <%= @cohort.end_date %><br>
 <%= @cohort.course.name %><br>
 
 <%@students.each do |student|%>
-<%=student.first_name%><br>
-<%end%>
+<%=student.first_name%>
+<%= student.last_name %>
+<%end%> <br>
 
 <%= link_to 'Remove cohort', delete_cohort_path, method: :delete, data: { confirm: 'Are you sure?' } %>
