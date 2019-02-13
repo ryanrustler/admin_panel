@@ -1,7 +1,6 @@
-<h2><%= @student.first_name  %></h1>
-<h2><%=  @student.last_name %></h2><br>
-<%=  @student.age %><br>
-<%= @student.education %><br>
+<h2><%= @student.first_name  %> <%=  @student.last_name %></h2><br>
+ Age: <%=  @student.age %><br>
+Education: <%= @student.education %><br>
 
 
 <%= link_to 'Remove', delete_student_path, method: :delete, data: { confirm: 'Are you sure?' } %>
