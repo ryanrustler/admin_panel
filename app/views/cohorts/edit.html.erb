@@ -1,24 +1,20 @@
 <h1> Edit Cohorts </h1>
 
 <%= form_with model: @cohort, url: cohort_path, method: :patch do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %><br> 
+<h2><%= f.label :name %>:    <%= f.text_field :name %><br></h2>
 
-<%= f.label :start_date %>
-<%= f.date_field :start_date %><br>
+<h2><%= f.label :start_date %>: <%= f.date_field :start_date %><br></h2>
+ 
+<h2><%= f.label :end_date %>: <%= f.date_field :end_date %><br></h2>
 
-<%= f.label :end_date %>
-<%= f.date_field :end_date %><br>
+<h2> Students: <%= f.hidden_field :student_id, value: @student_id%>
+<%= f.select :student_id, @students.map {|student| [student.first_name,student.id]} %><br></h2>
 
-<%= f.hidden_field :student_id, value: @student_id%>
-<%= f.select :student_id, @students.map {|student| [student.first_name,student.id]} %>
-
-<%= f.hidden_field :instructor_id, value: @instructor_id%>
-<%=f.select :instructor_id, @instructors.map {|instructor| [instructor.first_name,instructor.id]} %>
+<h2> Instructor: <%= f.hidden_field :instructor_id, value: @instructor_id%>
+<%=f.select :instructor_id, @instructors.map {|instructor| [instructor.first_name,instructor.id]} %><br>
 
 
-<%= f.label :create_cohort%>
-<%= f.submit %>
+<h2><%= f.label :Update_cohort%>: <%= f.submit %></h2>
 
 
 <%= link_to 'Remove course', delete_course_path, method: :delete, data: { confirm: 'Are you sure?' } %>

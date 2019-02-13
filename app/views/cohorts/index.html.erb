@@ -1,11 +1,10 @@
 <h1> ALL Cohorts </h1>
 
 <% @cohorts.each do |cohort| %>
-<h2><li><%= cohort.name %> </li></h2>
-<h3><li><%= cohort.start_date %> </li></h3>
-<h4><li><%= cohort.end_date %> </li><br></h4>
-
-<li> <%= cohort.course.name %> </li>
+<h2>Cohort: <%= cohort.name %></h2>
+<h3>Start Date: <%= cohort.start_date %></h3>
+<h3>End Date: <%= cohort.end_date %><br></h3>
+<h3> Course: <%= cohort.course.name %> </h3>
 
 
 

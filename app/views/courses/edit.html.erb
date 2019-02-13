@@ -1,13 +1,13 @@
 <h1> Edit Courses </h1>
 
 <%= form_with model: @course, url: course_path, method: :patch do |f| %>
-<%= f.label :name %>
+<h2><%= f.label :name %>:</h2>
 <%= f.text_field :name %><br> 
 
-<%= f.label :hours %>
+<h2><%= f.label :hours %>:</h2>
 <%= f.text_field :hours %><br>
 
-<%= f.label :create_course%>
+<h2><%= f.label :create_course%></h2>
 <%= f.submit %>
 
 <% end %>
