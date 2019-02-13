@@ -1,25 +1,18 @@
 <h1> Create a Cohorts </h1>
 
 <%= form_with model: @cohort, url: cohorts_path(@course), method: :post do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %><br> 
+<h2><%= f.label :name %>: <%= f.text_field :name %><br> </h2>
 
-<%= f.label :start_date %>
-<%= f.date_field :start_date %><br>
+<h2><%= f.label :start_date %>: <%= f.date_field :start_date %><br></h2>
 
-<%= f.label :end_date %>
-<%= f.date_field :end_date %><br>
+<h2><%= f.label :end_date %>: <%= f.date_field :end_date %><br></h2>
 
-<%= f.hidden_field :student_id, value: @student_id%>
-<%=f.select :student_id, @students.map {|student| [student.first_name,student.id]} %>
+<h2><%= f.hidden_field :student_id, value: @student_id%> Student: <%=f.select :student_id, @students.map {|student| [student.first_name,student.id]} %></h2>
 
-<%= f.hidden_field :instructor_id, value: @instructor_id%>
-<%=f.select :instructor_id, @instructors.map {|instructor| [instructor.first_name,instructor.id]} %>
+<h2><%= f.hidden_field :instructor_id, value: @instructor_id%> Instructor: <%=f.select :instructor_id, @instructors.map {|instructor| [instructor.first_name,instructor.id]} %>
 
-<%= f.hidden_field :course_id, value: @course_id%>
-<%=f.select :course_id, @courses.map {|course| [course.name,course.id]} %>
+<h2><%= f.hidden_field :course_id, value: @course_id%> Course: <%=f.select :course_id, @courses.map {|course| [course.name,course.id]} %><br>
 
-<%= f.label :create_cohorts%>
-<%= f.submit %>
+<h2><%= f.label :create_cohorts%>: <%= f.submit %>
 
 <% end %>
