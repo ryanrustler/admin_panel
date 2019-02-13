@@ -2,11 +2,10 @@
 
 <% @instructors.each do |instructor| %>
 
-<li><%= instructor.first_name %> </li>
-<li><%= instructor.last_name %> </li>
-<li><%= instructor.age %> </li>
-<li><%= instructor.salary %></li>
-<li><%= instructor.education %></li><br>
-<li><%= instructor.cohort.name%></li><br>
+<h2><%= instructor.first_name %> <%= instructor.last_name %> </h2>
+<li>Age: <%= instructor.age %> </li>
+<li>Salary: <%= instructor.salary %></li>
+<li>Education: <%= instructor.education %></li><br>
+<li>Cohort: <%= instructor.cohort.name%></li><br>
 <%= link_to "Edit Instructor", edit_instructor_path(instructor) %><br>
 <% end %>

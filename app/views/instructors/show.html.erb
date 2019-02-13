@@ -3,7 +3,7 @@
 <h2>Name: <%= @instructor.first_name %> <%= @instructor.last_name %><br></h2>
 Age: <%= @instructor.age %><br>  
 Salary: <%= @instructor.salary %><br>
-<%= @instructor.education %><br>
-<%= @instructor.cohort.name%><br>
+Education: <%= @instructor.education %><br>
+Cohort: <%= @instructor.cohort.name%><br>
 
 <%= link_to 'Remove instructor', delete_instructor_path, method: :delete, data: { confirm: 'Are you sure?' } %><br>
