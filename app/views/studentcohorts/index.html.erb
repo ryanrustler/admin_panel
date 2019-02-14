@@ -1,6 +1,7 @@
-<h1> Students in Cohorts </h1>'
+<h1> Students in Cohorts </h1>
 
 <%@studentcohorts.each do|sc|%>
-<li><%=sc.student.first_name%></li>
-<li><%=sc.cohort.name%></li><br>
+<h2><%=sc.cohort.name%></h2><br>
+<%=sc.student.first_name%> <%=sc.student.last_name %>
+
 <%end%>

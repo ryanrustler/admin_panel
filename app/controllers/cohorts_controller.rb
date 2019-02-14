@@ -1,7 +1,7 @@
 class CohortsController < ApplicationController
     def index
         @cohorts = Cohort.all
-        @students = Student.all
+        @students = Student.all.uniq
         @courses = Course.all
         @instructors = Instructor.all
 end
@@ -37,12 +37,24 @@ def edit
     @cohort = Cohort.find(params[:id])
     @students = Student.all
     @instructors =Instructor.all
+    @studentcohort = Studentcohort.all
+    @courses = Course.all
 end
 
 def update
     @cohort = Cohort.find(params[:id])
+    @courses = Course.all
+    @instructors = Instructor.all
     @cohort.update(cohorts_params)
-    redirect_to cohort_path(@cohort)
+    if @cohort.save
+        Studentcohort.create(
+            student_id: params[:cohort][:student_id],
+            cohort_id: @cohort.id
+        )
+               redirect_to @cohort
+    else
+        render 'edit'
+    end
 
 end
 
@@ -56,7 +68,7 @@ end
 
 private
 def cohorts_params
-    params.require(:cohort).permit(:name, :start_date, :end_date, :course_id)
+    params.require(:cohort).permit(:name, :start_date, :end_date, :course_id, :instructor_id)
   end
 end
 

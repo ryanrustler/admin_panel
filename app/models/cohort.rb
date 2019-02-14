@@ -1,7 +1,7 @@
 class Cohort < ApplicationRecord
-    has_one :instructor 
-    belongs_to :course, required: false
+    has_one :instructor, dependent: :destroy
+    belongs_to :course, dependent: :destroy
 
-    has_many :studentcohorts
+    has_many :studentcohorts, dependent: :destroy
     has_many :students, :through => :studentcohorts
 end

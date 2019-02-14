@@ -5,9 +5,9 @@
 <%= @cohort.end_date %><br>
 <%= @cohort.course.name %><br>
 
-<% @students.each do |student|%>
-<%=student.first_name%>
-<%=student.last_name %>
+<% @cohort.students.each do |student| %>
+<%= student.first_name%><br>
+<%= student.last_name%><br>
 
 
 

@@ -13,9 +13,12 @@
 <h2> Instructor: <%= f.hidden_field :instructor_id, value: @instructor_id%>
 <%=f.select :instructor_id, @instructors.map {|instructor| [instructor.first_name,instructor.id]} %><br>
 
+<%= f.hidden_field :course_id, value: @course_id%> Course: 
+<%=f.select :course_id, @courses.map {|course| [course.name,course.id]} %><br>
+
 
 <h2><%= f.label :Update_cohort%>: <%= f.submit %></h2>
 
 
-<%= link_to 'Remove course', delete_course_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Remove cohort', delete_cohort_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
