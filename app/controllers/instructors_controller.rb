@@ -14,13 +14,13 @@ class InstructorsController < ApplicationController
     def create
         @instructor = Instructor.new(instructors_params)
         if @instructor.save
-            redirect_to instructors_path
-        else
+            redirect_to @instructors 
+            else
             @cohorts = Cohort.all
-            redirect_to root_path
+            render :new
         end
         
-    end
+    end         
 
     def show
         @instructor = Instructor.find(params[:id])
