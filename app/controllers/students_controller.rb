@@ -11,11 +11,11 @@ end
 
 
 def create
-    @student = Student.new(students_params)
+    @student = Student.create(students_params)
     if @student.save
         redirect_to students_path
     else
-        redirect_to root_path
+        render 'new'
     end
 
 end
