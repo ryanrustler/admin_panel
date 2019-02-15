@@ -14,7 +14,7 @@ class InstructorsController < ApplicationController
     def create
         @instructor = Instructor.new(instructors_params)
         if @instructor.save
-            redirect_to @instructors 
+            redirect_to @instructor
             else
             @cohorts = Cohort.all
             render :new
