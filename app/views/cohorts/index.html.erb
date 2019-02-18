@@ -9,6 +9,7 @@
 <%= link_to "Show Cohort", cohort_path(cohort) %>
 
 <%= link_to "Edit Cohort", edit_cohorts_path(cohort) %><br>
+<%= link_to 'Remove cohort', delete_cohort_path(cohort), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
   <%= link_to "New Cohorts", new_cohort_path %>
