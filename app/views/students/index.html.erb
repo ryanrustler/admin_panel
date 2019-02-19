@@ -2,12 +2,18 @@
 <h1> Students </h1> 
 
 <% @students.each do |student| %>
-
+<div>
+<div>
+<div>
 <h2><%= student.first_name %> <%= student.last_name %></h2>
 <li>Age: <%= student.age %> </li>
 <li>Education: <%= student.education %></li><br>
 
-<%= link_to 'Remove student', delete_student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<%= link_to 'Remove student', delete_student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %><br>
+</div> 
+</div> 
+</div> 
 <% end %>
 
  <%= link_to "Add Students", new_student_path %>

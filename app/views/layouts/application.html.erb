@@ -5,39 +5,43 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
 
-  <body>
+  <body class ="one">
 
- 
+ <h1>Admin Panel</h1>
   <p class="alert alert-success"><%= notice %></p>
   <p class="alert alert-danger"><%= alert %></p>
 
-  <nav>
  
-
-  </nav>
 
 
 <p class="navbar-text pull-right">
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
- <ul> <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |</li>
-  <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
- <li><%= link_to "Home", root_path %></li>
-  <li><%= link_to "Students", students_path %></li>
-   <li><%= link_to "Instructors", instructors_path  %> </li>
-  <li><%= link_to "Courses",  courses_path %></li>
-  <li><%= link_to "Cohorts", cohorts_path %></li>
-  <li><%= link_to "StudentCohorts", studentcohorts_path %></li>
+  Logged in as <strong><%= current_user.email %></strong>
+  <ul class="sidenav">
+   <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Students", students_path %></li>
+      <li><%= link_to "Instructors", instructors_path  %> </li>
+      <li><%= link_to "Courses",  courses_path %></li>
+      <li><%= link_to "Cohorts", cohorts_path %></li>
+      <li><%= link_to "StudentCohorts", studentcohorts_path %></li>
+  </ul> 
+  
+
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
-</p>
 
+</p>
+<div class ="format"style="margin-left:25%;padding:1px 16px;height:1000px;">
     <%= yield %>
+    </div>
   </body>
 </html>
