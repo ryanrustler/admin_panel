@@ -1,5 +1,7 @@
 <h1> Courses </h1>
-
+<h3 class = "right">
+  <%= link_to "New Courses", new_course_path %>
+  </h3>
 <% @courses.each do |course| %>
 
 <h2>Course Name: <%= course.name %></h2>

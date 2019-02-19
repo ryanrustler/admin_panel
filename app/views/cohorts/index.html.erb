@@ -1,4 +1,7 @@
 <h1> ALL Cohorts </h1>
+<h3 class = "right">
+  <%= link_to "New Cohorts", new_cohort_path %>
+</h3>
 
 <% @cohorts.each do |cohort| %>
 <h2>Cohort: <%= cohort.name %></h2>
@@ -12,4 +15,3 @@
 <%= link_to 'Remove cohort', delete_cohort_path(cohort), method: :delete, data: { confirm: 'Are you sure?' } %><br>
 <% end %>
 
-  <%= link_to "New Cohorts", new_cohort_path %>

@@ -41,3 +41,13 @@ ul {
 background-color:#9EBC9E;
 
 }
+
+button{
+float:right;
+background-color:#9EBC9E;
+color:white;
+}
+
+.right{
+    float:right;
+}
