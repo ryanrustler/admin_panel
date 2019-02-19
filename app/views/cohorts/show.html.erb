@@ -7,10 +7,7 @@ Course: <%= @cohort.course.name %><br>
 Instructor: <%= @cohort.instructor.first_name %><br>
 <h3> Students <h3>
 <% @cohort.students.each do |student| %>
-<%= student.first_name%> <%= student.last_name%><br>
-
-
-
+<%= student.first_name%> <%=student.last_name%><br>
 
 
 <%end%> <br>
