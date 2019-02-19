@@ -3,9 +3,12 @@ ul {
     margin: 0;
     padding: 0;
     width: 25%;
-    background-color: #f1f1f1;
+    background-color: #33658A;
     position: fixed;
     overflow: auto;
+    height:100%;
+    border-radius: 20px;
+
   }
   
   li a {
@@ -21,7 +24,7 @@ ul {
   }
   
   li a:hover:not(.active) {
-    background-color: #5CC8FF;
+    background-color: #9EBC9E;
     color: white;
   }
 
@@ -29,10 +32,12 @@ ul {
       margin-left:25%;
       padding:1px 16px;
       height:1000px;
+      background-color:#E5E5E6;
+      border-radius:20px;
   }
 
 .one{
 
-
+background-color:#9EBC9E;
 
 }
