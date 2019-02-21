@@ -2,7 +2,9 @@
 
 <h1> Instructors </h1> 
 <h3 class = "right">
+<button class = "button">
 <%= link_to "New Instructor", new_instructor_path %>
+</button>
 </h3>
 <% if @instructors %>
 <% @instructors.each do |instructor| %>
@@ -12,7 +14,11 @@
 <li>Salary: <%= instructor.salary %></li>
 <li>Education: <%= instructor.education %></li><br>
 <li>Cohort: <%= instructor.cohort.name%></li><br>
+<button class = "button2">
 <%= link_to "Edit Instructor", edit_instructor_path(instructor) %><br>
+</button>
+<button class = "button2">
 <%= link_to 'Remove instructor', delete_instructor_path(instructor), method: :delete, data: { confirm: 'Are you sure?' } %>
+</button>
 <% end %>
 <% end %>

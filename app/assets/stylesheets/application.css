@@ -42,12 +42,26 @@ background-color:#9EBC9E;
 
 }
 
-button{
-float:right;
-background-color:#9EBC9E;
-color:white;
+.button{
+
+  float:right;
+  font-size:20px;
+  background-color:#9EBC9E;
+  padding: 10px 10px;
+  border-radius:50px;
+  color:white;
+  border: none;
 }
 
-.right{
-    float:right;
+.button2{
+
+  font-size:20px;
+  background-color:#9EBC9E;
+  padding: 10px 10px;
+  border-radius:50px;
+  color:white;
+  border: none;
+
+
 }
+

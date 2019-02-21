@@ -1,9 +1,11 @@
 
 <h1> Students </h1>
-
-<h3 class = "right">
+<button class = "button">
+<div class= "right">
  <%= link_to "Add Students", new_student_path %>
-</h3>
+</button>
+
+
 
 <% @students.each do |student| %>
 
@@ -11,7 +13,11 @@
 <li>Age: <%= student.age %> </li>
 <li>Education: <%= student.education %></li><br>
 
+<button class = "button2">
+<%= link_to "Edit Student", edit_student_path(student) %><br>
+</button>
 
+<button class = "button2">
 <%= link_to 'Remove student', delete_student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %><br>
-
+</button>
 <% end %>

@@ -1,17 +1,22 @@
 <h1> ALL Cohorts </h1>
 <h3 class = "right">
+<button class = "button">
   <%= link_to "New Cohorts", new_cohort_path %>
+  </button>
 </h3>
-
 <% @cohorts.each do |cohort| %>
 <h2>Cohort: <%= cohort.name %></h2>
 <h3>Start Date: <%= cohort.start_date %></h3>
 <h3>End Date: <%= cohort.end_date %><br></h3>
 <h3> Course: <%= cohort.course.name %> </h3>
-
+<button class = "button2">
 <%= link_to "Show Cohort", cohort_path(cohort) %>
-
+</button>
+<button class = "button2">
 <%= link_to "Edit Cohort", edit_cohorts_path(cohort) %><br>
+</button>
+<button class = "button2">
 <%= link_to 'Remove cohort', delete_cohort_path(cohort), method: :delete, data: { confirm: 'Are you sure?' } %><br>
+</button>
 <% end %>
 
