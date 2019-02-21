@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 # resources :students
 
-root to: "students#index"
+root to: "home#index"
   get '/students' => 'students#index', as: 'students'
   get '/students/new' => 'students#new', as: 'new_student'
   get '/students/:id' => 'students#show', as: 'student'
@@ -38,5 +38,5 @@ root to: "students#index"
   delete '/cohorts/:id' => 'cohorts#destroy', as: 'delete_cohort'
 
   get '/studentcohorts' => 'studentcohorts#index', as: 'studentcohorts'
-
+  get '/home' => 'home#index', as: 'home'
 end
